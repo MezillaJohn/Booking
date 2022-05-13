@@ -34,12 +34,12 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 65%;
   box-sizing: border-box;
 }
 @media only screen and (max-width: 68.75em) {
   html {
-    font-size: 50%;
+    font-size: 55%;
   }
 }
 
@@ -60,10 +60,21 @@ body {
 }
 
 .search {
-  width: 40%;
+  flex: 0 0 40%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 31.5em) {
+  .search {
+    flex: 0 0 100%;
+    order: 1;
+    background-color: var(--color-Grey-light2);
+    padding: 0.7rem 2rem;
+  }
+  .search:focus {
+    box-shadow: none;
+  }
 }
 .search__input {
   font-family: inherit;
@@ -82,6 +93,11 @@ body {
   width: 100%;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
   background-color: var(--color-Grey-light3);
+}
+@media only screen and (max-width: 31.5em) {
+  .search__input:focus {
+    box-shadow: none;
+  }
 }
 .search__button {
   border: none;
@@ -262,6 +278,7 @@ body {
   .overview__heading {
     font-size: 1.8rem;
     padding: 1.25rem 2rem;
+    line-height: 1.2;
   }
 }
 .overview__stars {
@@ -272,6 +289,12 @@ body {
   width: 1.75rem;
   height: 1.75rem;
   fill: var(--color-primary);
+}
+@media only screen and (max-width: 37.5em) {
+  .overview__icon, .overview__location-icon {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 .overview__location-icon {
   margin-right: 0.2rem;
@@ -294,7 +317,8 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .overview__rating {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
+    text-align: center;
   }
 }
 .overview__rating-average {
@@ -304,7 +328,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .overview__rating-average {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 .overview__rating-count {
@@ -313,7 +337,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .overview__rating-count {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -431,6 +455,7 @@ body {
   margin-bottom: 3.5rem;
   box-shadow: var(--box-shadow2);
   position: relative;
+  overflow: hidden;
 }
 @media only screen and (max-width: 56.25em) {
   .review {
@@ -488,9 +513,14 @@ body {
   padding: 3.5rem 0;
   text-align: center;
 }
+@media only screen and (max-width: 31.5em) {
+  .cta {
+    padding: 3.5rem 5rem;
+  }
+}
 @media only screen and (max-width: 56.25em) {
   .cta {
-    padding: 2rem 0;
+    padding: 2rem 2rem;
   }
 }
 .cta__text {
@@ -587,6 +617,13 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: var(--bottom-line);
+}
+@media only screen and (max-width: 31.5em) {
+  .header {
+    flex-wrap: wrap;
+    height: 11rem;
+    align-content: space-around;
+  }
 }
 
 .content {
